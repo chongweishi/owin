@@ -1,10 +1,33 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+const emit = defineEmits(["changeType"]);
+const changeType = (val) => {
+  emit("changeType", val);
+};
+const props = defineProps({
+  currentIndex: {
+    type: Number,
+  },
+});
+const showMenu = ref(false);
+onMounted(() => {
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 10) {
+      showMenu.value = true;
+    } else {
+      showMenu.value = false;
+    }
+  });
+});
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
   <header
     class="absolute header-style herder-variant-two top-0 left-0 w-full z-10"
+    :class="showMenu ? 'sticky' : ''"
   >
     <div
       class="desktop-menu max-w-[1570px] mx-auto justify-center items-center xl:flex hidden"
@@ -13,20 +36,55 @@ import { ref } from "vue";
         <div class="menu-one">
           <ul class="flex items-center nav-list">
             <li>
-              <a href="javascript:void(0)" class="nav-link">品牌包网</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 0 ? 'font-theme' : ''"
+                @click="changeType(0)"
+              >
+                品牌包网
+              </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-link">品牌故事</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 1 ? 'font-theme' : ''"
+                @click="changeType(1)"
+              >
+                品牌故事
+              </a>
             </li>
             >
             <li>
-              <a href="javascript:void(0)" class="nav-link">演示站点</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 2 ? 'font-theme' : ''"
+                @click="changeType(2)"
+              >
+                演示站点
+              </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-link">品牌优势</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 3 ? 'font-theme' : ''"
+                @click="changeType(3)"
+              >
+                品牌优势
+              </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-link">游戏API</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 4 ? 'font-theme' : ''"
+                @click="changeType(4)"
+              >
+                游戏API
+              </a>
             </li>
           </ul>
         </div>
@@ -36,23 +94,44 @@ import { ref } from "vue";
         <div class="menu-one">
           <ul class="flex items-center nav-list">
             <li>
-              <a href="javascript:void(0)" class="nav-link">合作伙伴</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 5 ? 'font-theme' : ''"
+                @click="changeType(5)"
+              >
+                合作伙伴
+              </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-link">产品价格</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 6 ? 'font-theme' : ''"
+                @click="changeType(6)"
+              >
+                产品价格
+              </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-link">商务合作</a>
+              <a
+                href="javascript:void(0)"
+                class="nav-link"
+                :class="currentIndex == 7 ? 'font-theme' : ''"
+                @click="changeType(7)"
+              >
+                商务合作
+              </a>
             </li>
             <li>
               <a href="javascript:void(0)" class="nav-link">选择语言</a>
             </li>
             <li>
               <a href="javascript:void(0)" class="nav-link ml-2 mr-2">菜单</a>
-              <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+              <button class="hamburger align-middle" id="hamburger">
+                <span class="bg-theme"></span>
+                <span class="bg-theme"></span>
+                <span class="bg-theme"></span>
               </button>
             </li>
           </ul>
@@ -97,7 +176,7 @@ import { ref } from "vue";
           class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200"
         >
           <span class="ml-2 mr-2">菜单</span>
-          <button class="hamburger" id="hamburger">
+          <button class="hamburger font-theme" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
@@ -136,4 +215,6 @@ import { ref } from "vue";
 
 <style lang="scss" scoped>
 @import url(./../assets/css/style.scss);
+.active {
+}
 </style>

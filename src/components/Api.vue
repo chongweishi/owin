@@ -5,7 +5,7 @@ console.log(test);
 </script>
 
 <template>
-  <div>{{ test }}</div>
+  <section id="api">服务优势</section>
 </template>
 
 <style lang="scss" scoped></style>
