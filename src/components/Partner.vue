@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from "vue";
-const test = ref("test");
-console.log(test);
 </script>
 
 <template>

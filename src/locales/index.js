@@ -1,5 +1,4 @@
 import { createI18n } from "vue-i18n";
-import config from "../config";
 
 // 批量引入
 const en = import.meta.glob(["./en-US/*.json"], { eager: true });
@@ -13,11 +12,11 @@ const es = import.meta.glob("./es-MX/*.json", { eager: true });
 const loadLocales = (modules) => {
   const messages = {};
   Object.keys(modules).forEach((module) => {
-    let configFile = [config.site, "layout", "components", "common"];
+    // let configFile = ["common"];
     let filename = module.match(/(?<=\/).+(?=\.json)/)[0].split("/")[1];
-    if (configFile.includes(filename)) {
-      messages[filename] = { ...modules[module].default };
-    }
+    // if (configFile.includes(filename)) {
+    messages[filename] = { ...modules[module].default };
+    // }
   });
   return messages;
 };
@@ -43,12 +42,11 @@ const messages = {
   },
 };
 const i18n = createI18n({
-  legacy: false,
+  legacy: false, // 如果要支持compositionAPI，此项必须设置为false;
   warnHtmlInMessage: "off",
-  locale: localStorage.getItem("curLangKey") ?? config.locale, // 设置地区
-  fallbackLocale: config.locale,
-  globalInjection: true,
+  locale: localStorage.getItem("curLangKey") ?? "zh_chs", // 设置地区
+  fallbackLocale: "zh_chs",
+  globalInjection: true, // 全局注册$t方法
   messages,
 });
-
 export default i18n;

@@ -22,7 +22,7 @@ onMounted(() => {
     ></video>
     <div class="bgmask"></div>
     <div class="bg-bottom"></div>
-    <div class="container absolute z-10">
+    <div class="container absolute z-1">
       <div
         class="max-w-[850px] mx-auto text-center text-white relative lg:pb-24 pb-20 lg:pt-[220px] pt-36"
       >

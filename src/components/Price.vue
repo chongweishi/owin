@@ -9,6 +9,7 @@ console.log(test);
     <div class="container max-w-[1570px] mx-auto text-white">
       <div class="title mb-12" data-aos="fade-down">
         <h3 class="text-3xl text-center mb-2">包网产品价格</h3>
+        <h5 class="text-sm text-center">收费低廉合理，服务真诚用心</h5>
       </div>
       <div
         class="con-main-wrap wow bounceInUp list-5"

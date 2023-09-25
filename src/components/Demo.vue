@@ -22,11 +22,11 @@ const modules = ref([
   EffectCoverflow,
   Autoplay,
 ]);
-import pc0 from "@/assets/img/pc/banner0.png";
-import pc1 from "@/assets/img/pc/banner1.png";
-import pc2 from "@/assets/img/pc/banner2.png";
-import pc3 from "@/assets/img/pc/banner3.png";
-import pc4 from "@/assets/img/pc/banner4.png";
+import pc0 from "@/assets/img/demo/pc/banner0.png";
+import pc1 from "@/assets/img/demo/pc/banner1.png";
+import pc2 from "@/assets/img/demo/pc/banner2.png";
+import pc3 from "@/assets/img/demo/pc/banner3.png";
+import pc4 from "@/assets/img/demo/pc/banner4.png";
 const pcdemo = reactive([
   {
     img: pc0,
@@ -53,11 +53,11 @@ const pcdemo = reactive([
     name: "FC",
   },
 ]);
-import m0 from "@/assets/img/h5/banner0.png";
-import m1 from "@/assets/img/h5/banner1.png";
-import m2 from "@/assets/img/h5/banner2.png";
-import m3 from "@/assets/img/h5/banner3.png";
-import m4 from "@/assets/img/h5/banner4.png";
+import m0 from "@/assets/img/demo/h5/banner0.png";
+import m1 from "@/assets/img/demo/h5/banner1.png";
+import m2 from "@/assets/img/demo/h5/banner2.png";
+import m3 from "@/assets/img/demo/h5/banner3.png";
+import m4 from "@/assets/img/demo/h5/banner4.png";
 const mdemo = reactive([
   {
     img: m0,
