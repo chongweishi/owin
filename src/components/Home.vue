@@ -31,7 +31,7 @@ onMounted(() => {
           data-aos="fade-down"
         >
           <span class="animation__char_come_long">
-            专业全球
+            {{ $t("common.home.h1") }}
             <font class="font-theme">包网</font>
           </span>
         </h1>
