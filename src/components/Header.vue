@@ -111,6 +111,8 @@ const changeLang = (data) => {
   // localStorage.setItem("curLangKey", data.key);
   // window.location.reload();
 };
+const show = ref(false);
+const showlang = ref(false);
 </script>
 
 <template>
@@ -183,11 +185,12 @@ const changeLang = (data) => {
             </li>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
+                @click="show = true"
                 class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200"
               >
                 <span class="ml-2 mr-2">{{ $t("common.menu.menu") }}</span>
-                <button class="hamburger font-theme" id="hamburger">
+                <button class="hamburger" id="hamburger">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -206,53 +209,54 @@ const changeLang = (data) => {
       </a>
 
       <div class="space-x-4 flex items-center">
-        <a
-          href="#"
+        <!-- <a
+        href="javascript:void(0)"
           class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200"
         >
-          <span class="ml-2">选择语言</span>
+          <span class="ml-2">{{ $t("common.menu.lang") }}</span>
+        </a> -->
+        <a
+          href="javascript:void(0)"
+          class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200 nav-link relative"
+          @click="showlang = true"
+        >
+          <span class="ml-2">{{ $t("common.menu.lang") }}</span>
+          <ul class="nav-dropdown" :class="showlang ? 'showlang' : ''">
+            <li>
+              <a
+                href="javascript:void(0)"
+                v-for="(item, index) in langs"
+                class="flex items-center"
+                :class="item.key == curLang.key ? 'font-theme' : ''"
+                :key="index"
+                @click="changeLang(item)"
+              >
+                <img
+                  :src="getAssetsFile(item.image)"
+                  class="inline-block align-middle w-5 mr-2"
+                />
+                {{ item.name }}
+              </a>
+            </li>
+          </ul>
         </a>
+
         <a
-          href="#"
+          href="javascript:void(0)"
+          @click="show = true"
           class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200"
         >
-          <span class="ml-2 mr-2">菜单</span>
-          <button class="hamburger font-theme" id="hamburger">
+          <span class="ml-2 mr-2">{{ $t("common.menu.menu") }}</span>
+          <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
           </button>
         </a>
       </div>
-      <div id="mobile-menu" class="mobil-menu">
-        <ul>
-          <li>
-            <a href="javascript:void(0)" class="nav-link nav-link-sm">Home</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="nav-link nav-link-sm">Pages</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="nav-link nav-link-sm">
-              Destination
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link nav-link-sm">Blogs</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="nav-link nav-link-sm">
-              Packages
-            </a>
-          </li>
-          <li>
-            <a href="contact.html" class="nav-link nav-link-sm">Contact</a>
-          </li>
-        </ul>
-      </div>
     </div>
   </header>
-  <article class="menu show">
+  <article class="menu" :class="show ? 'show' : ''">
     <b class="_b"></b>
     <!--menubox background-color is 選單的底色-->
     <div class="menubox" style="background-color: rgba(0, 0, 0, 0.7)">
@@ -260,6 +264,7 @@ const changeLang = (data) => {
       <a
         class="lb_close menu_close"
         href="javascript:void(0);"
+        @click="show = false"
         style="border-color: #e70400"
       >
         <div>
@@ -270,12 +275,12 @@ const changeLang = (data) => {
       <!--border 邊框不能換色!! -->
       <div class="border">
         <div>
-          <img class="tl" src="/assets/img/bbin_line.png" alt="" />
+          <img class="tl" src="@/assets/img/line.png" alt="" />
           <span class="borderT"></span>
           <span class="borderL"></span>
           <span class="borderR"></span>
           <span class="borderD"></span>
-          <img class="br" src="/assets/img/bbin_line.png" alt="" />
+          <img class="br" src="@/assets/img/line.png" alt="" />
         </div>
       </div>
       <!--data-pcolor="一開始看到的字的顏色" ; data-hoverbg="li hover 時背景顏色" ; data-hovercolor="li hover 時字的顏色" -->
@@ -285,46 +290,20 @@ const changeLang = (data) => {
         data-hoverbg="#e70400"
         data-hovercolor="#fff"
       >
-        <img src="/upload/2018_12_171/20181217232815gor7dmcvq1.png" alt="" />
+        <img src="@/assets/svg/logo.svg" alt="logo" />
         <ul itemtype="http://schema.org/SiteNavigationElement">
-          <li itemprop="name">
+          <li itemprop="name" v-for="(item, index) in nav" :key="index">
             <a
               itemprop="url"
               class="cg"
-              href="https://bbin.com/bbin/cn/About"
+              href="javascript:void(0)"
+              @click="
+                changeType(item.index);
+                show = false;
+              "
               style="color: rgba(255, 255, 255, 0.4)"
             >
-              <p>关于BBIN</p>
-            </a>
-          </li>
-          <li itemprop="name">
-            <a
-              itemprop="url"
-              class="cg"
-              href="https://bbin.com/bbin/cn/News"
-              style="color: rgba(255, 255, 255, 0.4)"
-            >
-              <p>新闻</p>
-            </a>
-          </li>
-          <li itemprop="name">
-            <a
-              itemprop="url"
-              class="cg"
-              href="https://bbin.com/bbin/cn/Cooperation"
-              style="color: rgba(255, 255, 255, 0.4)"
-            >
-              <p>合作</p>
-            </a>
-          </li>
-          <li itemprop="name">
-            <a
-              itemprop="url"
-              class="cg"
-              href="https://bbin.com/bbin/cn/Contact"
-              style="color: rgba(255, 255, 255, 0.4)"
-            >
-              <p>联络我们</p>
+              <p>{{ item.title }}</p>
             </a>
           </li>
         </ul>
@@ -414,5 +393,261 @@ const changeLang = (data) => {
 .nav-dropdown > li a:hover {
   --tw-text-opacity: 1;
   color: rgb(232 96 76 / var(--tw-text-opacity));
+}
+.nav-dropdown.showlang {
+  opacity: 1;
+  visibility: visible;
+}
+.menu {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.menu.show {
+  z-index: 999;
+  animation: 1s fadeIn forwards;
+}
+.menu ._b {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+.menu.show ._b {
+  width: 100%;
+  left: 0;
+}
+.menu .menubox {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  padding: 220px 0 100px;
+  transition: 0.5s;
+}
+.lb_close,
+.hide_close {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid;
+  width: 80px;
+  height: 80px;
+  z-index: 20;
+  bottom: auto;
+}
+.menu.show .menu_close {
+  animation: 1s 1.2s fadeIn forwards;
+}
+.menu .menubox .menu_close {
+  right: 0;
+  top: 0;
+  left: auto;
+  transform: translate(0, 0);
+  opacity: 0;
+  margin: 0;
+}
+.lb_close div,
+.hide_close div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.lb_close span,
+.hide_close span {
+  display: block;
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lb_close span:first-child,
+.hide_close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu .border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+}
+.menu .border > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.menu .border > div img {
+  max-width: 40px;
+  position: absolute;
+}
+.menu .border > div img.tl {
+  left: 0;
+  top: 0;
+}
+.menu .borderT,
+.menu .borderL,
+.menu .borderR,
+.menu .borderD {
+  background: #d90e0a;
+  position: absolute;
+  display: inline-block;
+  transition: 0.5s;
+}
+.menu .borderT {
+  width: 0;
+  height: 2px;
+  left: 20px;
+  top: 0;
+}
+.menu .borderL {
+  width: 2px;
+  height: 0;
+  left: 0;
+  top: 20px;
+}
+.menu .borderR {
+  width: 2px;
+  height: 0;
+  right: 0;
+  bottom: 20px;
+}
+.menu .borderD {
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 20px;
+}
+.menu .border > div img {
+  max-width: 40px;
+  position: absolute;
+}
+.menu .border > div img.br {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+.menu.show .listbox {
+  animation: 1s 1.5s fadeIn forwards;
+}
+.menu .menubox .listbox {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+}
+.menu .menubox .listbox img {
+  max-width: 180px;
+  margin: 0 auto 30px;
+}
+.menu .menubox .listbox ul {
+  margin-bottom: 110px;
+}
+.menu .menubox .listbox li {
+  font-family: "ZapfHumanist601BT-Roman", "Microsoft JhengHei", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+.menu .menubox .listbox li a {
+  padding: 15px 70px;
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.menu .menubox .listbox li a:hover {
+  color: #fff !important;
+}
+.menu .menubox .listbox li a:hover::after {
+  height: 100%;
+}
+.menu .menubox .listbox li a p {
+  position: relative;
+  z-index: 2;
+}
+.menu .menubox .listbox li a::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  z-index: 0;
+}
+.listbox li a::after {
+  background-color: #e70400;
+}
+.lb_close span:last-child,
+.hide_close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.menu.show .borderT,
+.menu.show .borderL,
+.menu.show .borderR,
+.menu.show .borderD {
+  transition: 1s 0.8s;
+}
+
+.menu.show .borderT {
+  width: calc(100% - 60px);
+}
+.menu.show .borderL {
+  height: calc(100% - 20px);
+}
+.menu.show .borderR {
+  height: calc(100% - 60px);
+}
+.menu.show .borderD {
+  width: calc(100% - 20px);
+}
+.border {
+  border: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .menu .menubox {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu .menubox {
+    width: 100%;
+    padding: 100px 0 100px;
+  }
+  .menu .menubox .menu_close {
+    width: 60px;
+    height: 60px;
+    top: 25px;
+  }
+  .menu .border {
+    width: calc(100% - 60px);
+    height: calc(100% - 100px);
+  }
+  .menu.show .borderT {
+    width: calc(100% - 50px);
+  }
+  .menu.show .borderR {
+    height: calc(100% - 55px);
+  }
 }
 </style>

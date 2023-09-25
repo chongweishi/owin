@@ -21,7 +21,7 @@ onMounted(() => {
       class="absolute z-1 w-auto min-w-full min-h-full max-w-none object-cover"
     ></video>
     <div class="bgmask"></div>
-    <div class="bg-bottom"></div>
+    <div class="bg-bottom h-12 md:h--[220px] lg:h-[200px]"></div>
     <div class="container absolute z-1">
       <div
         class="max-w-[850px] mx-auto text-center text-white relative lg:pb-24 pb-20 lg:pt-[220px] pt-36"
@@ -32,14 +32,22 @@ onMounted(() => {
         >
           <span class="animation__char_come_long">
             专业全球
-            <b class="font-theme">包网</b>
+            <font class="font-theme">包网</font>
           </span>
         </h1>
-        <p class="lg:text-[25px] text-2md mt-4 leading-1.7" data-aos="fade-up">
+        <p
+          class="text-xs md:text-sm lg:text-1md xl:text-md mt-4 leading-1.7"
+          data-aos="fade-up"
+        >
           全球API十大品牌供应商，由顶尖500人开发团队历经10年打造，是您可靠的合作伙伴和安全后盾。
         </p>
-        <div class="lg:mt-10 mt-7" data-aos="fade-up">
-          <a href="package-details.html" class="btn_primary__v1">联系我们</a>
+        <div class="lg:mt-30 mt-7" data-aos="fade-up">
+          <a
+            href="package-details.html"
+            class="contact-btn text-xs md:text-sm lg:text-1md xl:text-md"
+          >
+            联系我们
+          </a>
         </div>
       </div>
     </div>
@@ -64,9 +72,21 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 200px;
   background: url(@/assets/img/bg-bottom.png) no-repeat;
   z-index: 3;
   background-size: cover;
+}
+.contact-btn {
+  width: 232px;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  background: #bd0507;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 33px;
+  box-shadow: 0 0 20px rgba(231, 4, 0, 0.5);
 }
 </style>

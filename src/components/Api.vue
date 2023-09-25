@@ -99,7 +99,7 @@ const gameType = ref([
 #api {
   width: 100%;
   height: 100%;
-  background: url(@/assets/img/bg2.png) no-repeat;
+  background: #17171b url(@/assets/img/bg3.png) no-repeat;
 }
 .gameItem {
   background: #1f1f1f;
