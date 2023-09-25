@@ -174,7 +174,7 @@ const changeLang = (data) => {
                   >
                     <img
                       :src="getAssetsFile(item.image)"
-                      class="inline-block align-middle w-8"
+                      class="inline-block align-middle w-5 mr-2"
                     />
                     {{ item.name }}
                   </a>
@@ -198,7 +198,6 @@ const changeLang = (data) => {
         </div>
       </div>
     </div>
-    测试
     <div
       class="mobile-menu xl:hidden flex justify-between items-center relative"
     >
@@ -253,6 +252,104 @@ const changeLang = (data) => {
       </div>
     </div>
   </header>
+  <article class="menu show">
+    <b class="_b"></b>
+    <!--menubox background-color is 選單的底色-->
+    <div class="menubox" style="background-color: rgba(0, 0, 0, 0.7)">
+      <!--border-color is 關閉icon框線顏色，裡面的span顏色為叉叉顏色，此部分請抓同一個顏色欄位 -->
+      <a
+        class="lb_close menu_close"
+        href="javascript:void(0);"
+        style="border-color: #e70400"
+      >
+        <div>
+          <span style="background: #e70400"></span>
+          <span style="background: #e70400"></span>
+        </div>
+      </a>
+      <!--border 邊框不能換色!! -->
+      <div class="border">
+        <div>
+          <img class="tl" src="/assets/img/bbin_line.png" alt="" />
+          <span class="borderT"></span>
+          <span class="borderL"></span>
+          <span class="borderR"></span>
+          <span class="borderD"></span>
+          <img class="br" src="/assets/img/bbin_line.png" alt="" />
+        </div>
+      </div>
+      <!--data-pcolor="一開始看到的字的顏色" ; data-hoverbg="li hover 時背景顏色" ; data-hovercolor="li hover 時字的顏色" -->
+      <div
+        class="listbox"
+        data-pcolor="rgba(255, 255, 255, .4)"
+        data-hoverbg="#e70400"
+        data-hovercolor="#fff"
+      >
+        <img src="/upload/2018_12_171/20181217232815gor7dmcvq1.png" alt="" />
+        <ul itemtype="http://schema.org/SiteNavigationElement">
+          <li itemprop="name">
+            <a
+              itemprop="url"
+              class="cg"
+              href="https://bbin.com/bbin/cn/About"
+              style="color: rgba(255, 255, 255, 0.4)"
+            >
+              <p>关于BBIN</p>
+            </a>
+          </li>
+          <li itemprop="name">
+            <a
+              itemprop="url"
+              class="cg"
+              href="https://bbin.com/bbin/cn/News"
+              style="color: rgba(255, 255, 255, 0.4)"
+            >
+              <p>新闻</p>
+            </a>
+          </li>
+          <li itemprop="name">
+            <a
+              itemprop="url"
+              class="cg"
+              href="https://bbin.com/bbin/cn/Cooperation"
+              style="color: rgba(255, 255, 255, 0.4)"
+            >
+              <p>合作</p>
+            </a>
+          </li>
+          <li itemprop="name">
+            <a
+              itemprop="url"
+              class="cg"
+              href="https://bbin.com/bbin/cn/Contact"
+              style="color: rgba(255, 255, 255, 0.4)"
+            >
+              <p>联络我们</p>
+            </a>
+          </li>
+        </ul>
+        <!--data-color="一開始看到的顏色" ; data-hcolor="hover 時 i的顏色" ;-->
+        <div class="menusharebox">
+          <div data-color="#e70400" data-hcolor="#fff">
+            <a
+              href="http://www.youtube.com/c/BBINOfficial "
+              target="_blank"
+              style="color: rgb(231, 4, 0); border-color: rgb(231, 4, 0)"
+            >
+              <i class="icon-youtube"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/bbinofficial/"
+              target="_blank"
+              style="color: rgb(231, 4, 0); border-color: rgb(231, 4, 0)"
+            >
+              <i class="icon-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </template>
 
 <style lang="scss" scoped>
@@ -263,7 +360,7 @@ const changeLang = (data) => {
   top: 100%;
   left: 0px;
   z-index: 10;
-  width: 15rem;
+  width: 11rem;
   --tw-translate-y: 1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
