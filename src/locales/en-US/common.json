@@ -10,6 +10,27 @@
     "title3": "Supports more than 20 languages ​​and covers 95% of the world’s population",
     "title4": "Low and reasonable fees, sincere and attentive service"
   },
+  "api": {
+    "menu0": "all",
+    "menu1": "real person",
+    "menu2": "electronic",
+    "menu3": "physical education",
+    "menu4": "chess and cards",
+    "menu5": "Lottery",
+    "menu6": "fishing",
+    "menu7": "sports"
+  },
+  "contact": {
+    "btn": "contact business",
+    "copyright": "Copyright ©2022-2023 TOP10 Package Network All Rights Reserved",
+    "des": "Quickly open a website in five easy steps",
+    "step1": "Negotiation of intention and demand",
+    "step2": "Sign a cooperation agreement",
+    "step3": "Communicate website building details",
+    "step4": "Platform site deployment",
+    "step5": "Officially launched for operation",
+    "title": "Business Cooperation"
+  },
   "demo": {
     "btnapp": "Mobile APP",
     "btnpc": "PC web",
@@ -32,6 +53,28 @@
     "menu": "Menu",
     "partner": "Partner",
     "story": "Story"
+  },
+  "partner": {
+    "des": "Listed in no particular order, only temporary sections",
+    "title": "our business partner"
+  },
+  "price": {
+    "des": "Low and reasonable fees, sincere and attentive service",
+    "kbf": "Publishing fee",
+    "kbf1": "Professional team technical configuration to guide website opening matters",
+    "kbf2": "Senior UI designer assists in processing page display effects",
+    "kbf3": "Professional technical team deploys efficiently and quickly to open the website",
+    "kbf4": "Free integration with third-party payment, SMS platforms, etc.",
+    "kbf5": "Operation and maintenance team project deployment, domain name resolution, etc.",
+    "title": "Baowang product price",
+    "ywhf": "monthly maintenance fee",
+    "ywhf1": "7*24 hours online customer service to assist in solving problems",
+    "ywhf2": "The technical team is efficient and actively assists in handling and answering questions.",
+    "ywhf3": "Platform customization for simple needs, free development and maintenance",
+    "ywhf4": "The operation and maintenance team ensures website security 24 hours a day",
+    "zzfy": "Final website opening cost",
+    "zzfy1": "After final negotiation, the native APP, computer terminal, and H5 terminal will be delivered as scheduled.",
+    "zzfy2": "(For customized platforms or needs, please contact the business department in time)"
   },
   "story": {
     "des1": "The TOP10 package network project was established in 2013 and has been developed for more than 10 years. It has served hundreds of customers and has a technical team of hundreds to ensure the stable operation of the project 24 hours a day.",

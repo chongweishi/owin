@@ -10,6 +10,27 @@
     "title3": "Admite más de 20 idiomas y cubre el 95% de la población mundial",
     "title4": "Tarifas bajas y razonables, servicio sincero y atento."
   },
+  "api": {
+    "menu0": "todo",
+    "menu1": "Persona real",
+    "menu2": "electrónico",
+    "menu3": "educación Física",
+    "menu4": "ajedrez y cartas",
+    "menu5": "Lotería",
+    "menu6": "pesca",
+    "menu7": "Deportes"
+  },
+  "contact": {
+    "btn": "Contacto (comercial",
+    "copyright": "Copyright ©2022-2023 TOP10 Package Network Todos los derechos reservados",
+    "des": "Abra rápidamente un sitio web en cinco sencillos pasos",
+    "step1": "Negociación de intención y demanda.",
+    "step2": "Firmar un acuerdo de cooperación",
+    "step3": "Comunicar los detalles de la creación del sitio web",
+    "step4": "Implementación del sitio de la plataforma",
+    "step5": "Lanzado oficialmente para operar.",
+    "title": "Cooperación empresarial"
+  },
   "demo": {
     "btnapp": "Aplicación movil",
     "btnpc": "Internet para PC",
@@ -32,6 +53,28 @@
     "menu": "Menú",
     "partner": "Pareja",
     "story": "Historia"
+  },
+  "partner": {
+    "des": "Listado sin ningún orden en particular, solo secciones temporales",
+    "title": "nuestro socio comercial"
+  },
+  "price": {
+    "des": "Tarifas bajas y razonables, servicio sincero y atento.",
+    "kbf": "Tarifa de publicación",
+    "kbf1": "Configuración técnica del equipo profesional para guiar los asuntos de apertura del sitio web.",
+    "kbf2": "El diseñador senior de UI ayuda a procesar los efectos de visualización de la página",
+    "kbf3": "El equipo técnico profesional se implementa de manera eficiente y rápida para abrir el sitio web.",
+    "kbf4": "Integración gratuita con pagos de terceros, plataformas de SMS, etc.",
+    "kbf5": "Implementación de proyectos del equipo de operación y mantenimiento, resolución de nombres de dominio, etc.",
+    "title": "Precio del producto Baowang",
+    "ywhf": "Cuota Mensual de Mantenimiento",
+    "ywhf1": "Servicio al cliente en línea 7*24 horas para ayudar a resolver problemas",
+    "ywhf2": "El equipo técnico es eficiente y ayuda activamente en el manejo y respuesta de preguntas.",
+    "ywhf3": "Personalización de la plataforma para necesidades simples, desarrollo y mantenimiento gratuitos.",
+    "ywhf4": "El equipo de operación y mantenimiento garantiza la seguridad del sitio web las 24 horas del día.",
+    "zzfy": "Coste final de apertura del sitio web",
+    "zzfy1": "Después de la negociación final, la aplicación nativa, la terminal informática y la terminal H5 se entregarán según lo programado.",
+    "zzfy2": "(Para plataformas o necesidades personalizadas, comuníquese con el departamento comercial a tiempo)"
   },
   "story": {
     "des1": "El proyecto de red de paquetes TOP10 se estableció en 2013 y se ha desarrollado durante más de 10 años, ha atendido a cientos de clientes y cuenta con un equipo técnico de cientos para garantizar el funcionamiento estable del proyecto las 24 horas del día.",

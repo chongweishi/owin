@@ -10,6 +10,27 @@
     "title3": "Hỗ trợ hơn 20 ngôn ngữ và bao phủ 95% dân số thế giới",
     "title4": "Chi phí thấp, hợp lý, phục vụ tận tình, chu đáo"
   },
+  "api": {
+    "menu0": "tất cả",
+    "menu1": "người thực",
+    "menu2": "điện tử",
+    "menu3": "giáo dục thể chất",
+    "menu4": "cờ vua và bài",
+    "menu5": "Vé số",
+    "menu6": "đánh bắt cá",
+    "menu7": "các môn thể thao"
+  },
+  "contact": {
+    "btn": "liên hệ kinh doanh",
+    "copyright": "Bản quyền ©2022-2023 Mạng trọn gói TOP10 Mọi quyền được bảo lưu",
+    "des": "Nhanh chóng mở một trang web trong năm bước đơn giản",
+    "step1": "Đàm phán về ý định và nhu cầu",
+    "step2": "Ký kết thỏa thuận hợp tác",
+    "step3": "Truyền đạt chi tiết xây dựng trang web",
+    "step4": "Triển khai trang web nền tảng",
+    "step5": "Chính thức đưa vào hoạt động",
+    "title": "Hợp tác kinh doanh"
+  },
   "demo": {
     "btnapp": "Ứng dụng di động",
     "btnpc": "web máy tính",
@@ -32,6 +53,28 @@
     "menu": "Thực đơn",
     "partner": "Cộng sự",
     "story": "Câu chuyện"
+  },
+  "partner": {
+    "des": "Được liệt kê không theo thứ tự cụ thể, chỉ có các phần tạm thời",
+    "title": "đối tác kinh doanh của chúng tôi"
+  },
+  "price": {
+    "des": "Chi phí thấp, hợp lý, phục vụ tận tình, chu đáo",
+    "kbf": "Phí xuất bản",
+    "kbf1": "Cấu hình kỹ thuật đội ngũ chuyên nghiệp để hướng dẫn các vấn đề mở trang web",
+    "kbf2": "Nhà thiết kế giao diện người dùng cao cấp hỗ trợ xử lý các hiệu ứng hiển thị trang",
+    "kbf3": "Đội ngũ kỹ thuật chuyên nghiệp triển khai mở website hiệu quả, nhanh chóng",
+    "kbf4": "Tích hợp miễn phí với thanh toán của bên thứ ba, nền tảng SMS, v.v.",
+    "kbf5": "Nhóm vận hành và bảo trì triển khai dự án, phân giải tên miền, v.v.",
+    "title": "Giá sản phẩm Bảo Vương",
+    "ywhf": "Phí duy trì hàng tháng",
+    "ywhf1": "Dịch vụ khách hàng trực tuyến 7 * 24 giờ để hỗ trợ giải quyết vấn đề",
+    "ywhf2": "Đội ngũ kỹ thuật làm việc hiệu quả và tích cực hỗ trợ xử lý, giải đáp thắc mắc.",
+    "ywhf3": "Tùy chỉnh nền tảng cho các nhu cầu đơn giản, phát triển và bảo trì miễn phí",
+    "ywhf4": "Đội ngũ vận hành và bảo trì đảm bảo an ninh website 24/24",
+    "zzfy": "Chi phí mở trang web cuối cùng",
+    "zzfy1": "Sau khi đàm phán lần cuối, APP gốc, thiết bị đầu cuối máy tính và thiết bị đầu cuối H5 sẽ được phân phối theo lịch trình.",
+    "zzfy2": "(Đối với các nền tảng hoặc nhu cầu tùy chỉnh, vui lòng liên hệ kịp thời với bộ phận kinh doanh)"
   },
   "story": {
     "des1": "Dự án mạng trọn gói TOP10 được thành lập vào năm 2013 và phát triển hơn 10 năm, đã phục vụ hàng trăm khách hàng và có đội ngũ kỹ thuật lên tới hàng trăm người để đảm bảo dự án hoạt động ổn định 24/24.",
