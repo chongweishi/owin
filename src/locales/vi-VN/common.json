@@ -1,13 +1,54 @@
 {
+  "advantage": {
+    "des": "Ảnh hưởng của thương hiệu là rõ ràng, sự lựa chọn tốt hơn của bạn",
+    "des1": "Các vấn đề như tác động của chính sách trang web sử dụng một loại tiền tệ, hiệu suất giảm sút, lãng phí các trang web cũ, chi phí tăng, cản trở sự phát triển và nhân lực hạn chế đều có thể được giải quyết trong các trang web đa tiền tệ toàn cầu của chúng tôi.",
+    "des2": "Khách hàng có thể tự do và linh hoạt lựa chọn bố cục, đồng thời cũng có thể tùy chỉnh giao diện trang web độc quyền, giúp nâng cao đáng kể khả năng kiểm soát kiểu trang web.",
+    "des3": "Hỗ trợ tiếng Trung giản thể, tiếng Anh, tiếng Trung phồn thể, tiếng Hindi, tiếng Tây Ban Nha, tiếng Pháp, tiếng Ả Rập, tiếng Nga, tiếng Bồ Đào Nha, tiếng Indonesia, tiếng Đức, tiếng Nhật, tiếng Hàn, tiếng Việt...",
+    "title": "lợi thế thương hiệu",
+    "title1": "Hỗ trợ đa tiền tệ toàn cầu và vận hành nhiều quốc gia cùng một lúc",
+    "title2": "Hỗ trợ nhiều tùy chọn bố cục và cũng có thể được tùy chỉnh",
+    "title3": "Hỗ trợ hơn 20 ngôn ngữ và bao phủ 95% dân số thế giới",
+    "title4": "Chi phí thấp, hợp lý, phục vụ tận tình, chu đáo"
+  },
+  "demo": {
+    "btnapp": "Ứng dụng di động",
+    "btnpc": "web máy tính",
+    "des": "Bạn có thể chọn bất kỳ mẫu nào bạn thích và vào trang bên trong để xem thêm các trang web với các phong cách khác nhau.",
+    "title": "trang web demo"
+  },
+  "home": {
+    "btn": "liên hệ chúng tôi",
+    "h1": "Toàn cầu chuyên nghiệp",
+    "h2": "Bảo Vương",
+    "p": "Mười nhà cung cấp thương hiệu API hàng đầu thế giới, được xây dựng bởi đội ngũ phát triển gồm 500 người hàng đầu trong hơn 10 năm, là đối tác đáng tin cậy và hỗ trợ bảo mật cho bạn."
+  },
   "menu": {
     "advantage": "Lợi thế",
     "api": "API",
     "contact": "Liên hệ",
     "demo": "Thử nghiệm",
     "home": "Trang chủ",
-    "partner": "Cộng sự",
-    "story": "Câu chuyện",
     "lang": "Ngôn ngữ",
-    "menu": "Thực đơn"
+    "menu": "Thực đơn",
+    "partner": "Cộng sự",
+    "story": "Câu chuyện"
+  },
+  "story": {
+    "des1": "Dự án mạng trọn gói TOP10 được thành lập vào năm 2013 và phát triển hơn 10 năm, đã phục vụ hàng trăm khách hàng và có đội ngũ kỹ thuật lên tới hàng trăm người để đảm bảo dự án hoạt động ổn định 24/24.",
+    "des2": "Phát triển 60 loại mẫu khác nhau đáp ứng 70% nhu cầu thị trường. \nNếu bạn có nhiều ý tưởng hơn và các mẫu thị trường không thể làm bạn hài lòng, chúng tôi cung cấp đầy đủ các giải pháp từ thiết kế tương tác, thiết kế giao diện đến tùy chỉnh chức năng, bao gồm PC, H5 và APP.",
+    "des3": "Cung cấp các phiên bản đa ngôn ngữ tiếng Trung, tiếng Anh, tiếng Thái, tiếng Việt và các ngôn ngữ khác, cũng như các dịch vụ tùy chỉnh bằng bất kỳ ngôn ngữ nào; được phát triển bằng công nghệ thuần túy, giải quyết triệt để các vấn đề như mất tiền nạp và chiếm quyền truy cập, đảm bảo an ninh trang web; hơn 40 các công ty bao gồm BBIN, AG, MG, v.v. Nhà sản xuất trò chơi quốc tế, hơn 200 trò chơi để bạn lựa chọn.",
+    "stat1name": "Tích lũy phát triển",
+    "stat1num": "10",
+    "stat1unit": "Năm",
+    "stat2name": "Dịch vụ khách hàng",
+    "stat2num": "100",
+    "stat2unit": "+",
+    "stat3name": "Các loại mẫu khác nhau",
+    "stat3num": "60",
+    "stat4name": "Nhà sản xuất trò chơi quốc tế",
+    "stat4num": "40",
+    "stat5name": "lựa chọn trò chơi",
+    "stat5num": "200",
+    "title": "Câu chuyện thương hiệu"
   }
 }

@@ -32,21 +32,21 @@ onMounted(() => {
         >
           <span class="animation__char_come_long">
             {{ $t("common.home.h1") }}
-            <font class="font-theme">包网</font>
+            <font class="font-theme">{{ $t("common.home.h2") }}</font>
           </span>
         </h1>
         <p
           class="text-xs md:text-sm lg:text-1md xl:text-md mt-4 leading-1.7"
           data-aos="fade-up"
         >
-          全球API十大品牌供应商，由顶尖500人开发团队历经10年打造，是您可靠的合作伙伴和安全后盾。
+          {{ $t("common.home.p") }}
         </p>
         <div class="lg:mt-30 mt-7" data-aos="fade-up">
           <a
             href="package-details.html"
             class="contact-btn text-xs md:text-sm lg:text-1md xl:text-md"
           >
-            联系我们
+            {{ $t("common.home.btn") }}
           </a>
         </div>
       </div>
@@ -77,16 +77,13 @@ onMounted(() => {
   background-size: cover;
 }
 .contact-btn {
-  width: 232px;
-  height: 66px;
-  line-height: 66px;
   text-align: center;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   background: #bd0507;
   color: #fff;
-  font-size: 20px;
-  border-radius: 33px;
+  border-radius: 10px;
   box-shadow: 0 0 20px rgba(231, 4, 0, 0.5);
+  padding: 2.5% 8%;
 }
 </style>

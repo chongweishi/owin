@@ -1,13 +1,54 @@
 {
+  "advantage": {
+    "des": "A influência da marca é óbvia, sua melhor escolha",
+    "des1": "Problemas como o impacto das políticas locais de moeda única, o declínio do desempenho, o desperdício de locais antigos, o aumento dos custos, o desenvolvimento prejudicado e a mão-de-obra limitada podem ser resolvidos nos nossos locais globais multimoedas.",
+    "des2": "Os clientes podem escolher o layout de forma livre e flexível e também personalizar skins exclusivas do site, o que aumenta muito a controlabilidade do estilo do site.",
+    "des3": "Suporta chinês simplificado, inglês, chinês tradicional, hindi, espanhol, francês, árabe, russo, português, indonésio, alemão, japonês, coreano, vietnamita...",
+    "title": "vantagens da marca",
+    "title1": "Apoie multimoedas globais e opere vários países ao mesmo tempo",
+    "title2": "Suporta uma variedade de opções de layout e também pode ser personalizado",
+    "title3": "Suporta mais de 20 idiomas e cobre 95% da população mundial",
+    "title4": "Taxas baixas e razoáveis, serviço sincero e atencioso"
+  },
+  "demo": {
+    "btnapp": "Aplicativo móvel",
+    "btnpc": "Rede para PC",
+    "des": "Você pode escolher qualquer modelo que desejar e entrar na página interna para ver mais sites de estilos diferentes.",
+    "title": "site de demonstração"
+  },
+  "home": {
+    "btn": "Contate-nos",
+    "h1": "Profissional Global",
+    "h2": "Baowang",
+    "p": "Os dez principais fornecedores de marcas de API do mundo, criados por uma equipe de desenvolvimento de 500 pessoas ao longo de 10 anos, são seus parceiros confiáveis ​​e suporte de segurança."
+  },
   "menu": {
     "advantage": "Vantagem",
     "api": "API",
     "contact": "Contato",
     "demo": "Demonstração",
     "home": "Lar",
-    "partner": "Parceiro",
-    "story": "História",
     "lang": "Linguagem",
-    "menu": "Cardápio"
+    "menu": "Cardápio",
+    "partner": "Parceiro",
+    "story": "História"
+  },
+  "story": {
+    "des1": "O projeto de rede de pacotes TOP10 foi criado em 2013 e vem sendo desenvolvido há mais de 10 anos, já atendeu centenas de clientes e conta com uma equipe técnica de centenas de pessoas para garantir o funcionamento estável do projeto 24 horas por dia.",
+    "des2": "Desenvolvi 60 tipos diferentes de templates para atender 70% da demanda do mercado. \nSe você tem mais ideias e os templates do mercado não conseguem satisfazê-lo, oferecemos uma gama completa de soluções desde design de interação, design de interface até customização de funções, incluindo PC, H5 e APP.",
+    "des3": "Fornece versões em chinês, inglês, tailandês, vietnamita e outros idiomas, bem como serviços personalizados em qualquer idioma; desenvolvido usando tecnologia nativa pura, resolvendo completamente problemas como perda de fundos de recarga e sequestro de tráfego, garantindo a segurança do site; mais de 40 empresas incluindo BBIN, AG, MG, etc. Fabricante internacional de jogos, mais de 200 jogos para escolher.",
+    "stat1name": "Desenvolvido cumulativamente",
+    "stat1num": "10",
+    "stat1unit": "Ano",
+    "stat2name": "Atendimento ao Cliente",
+    "stat2num": "100",
+    "stat2unit": "+",
+    "stat3name": "Diferentes tipos de modelos",
+    "stat3num": "60",
+    "stat4name": "Fabricante internacional de jogos",
+    "stat4num": "40",
+    "stat5name": "seleção de jogos",
+    "stat5num": "200",
+    "title": "História da marca"
   }
 }

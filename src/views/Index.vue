@@ -80,4 +80,9 @@ onBeforeUnmount(() => {
   <Contact ref="menu"></Contact>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+body,
+#app {
+  background: #08080a;
+}
+</style>

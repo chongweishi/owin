@@ -58,6 +58,7 @@ import m1 from "@/assets/img/demo/h5/banner1.png";
 import m2 from "@/assets/img/demo/h5/banner2.png";
 import m3 from "@/assets/img/demo/h5/banner3.png";
 import m4 from "@/assets/img/demo/h5/banner4.png";
+import m5 from "@/assets/img/demo/h5/banner5.png";
 const mdemo = reactive([
   {
     img: m0,
@@ -83,6 +84,38 @@ const mdemo = reactive([
     img: m4,
     name: "FC",
   },
+  {
+    img: m5,
+    name: "FC",
+  },
+  {
+    img: m0,
+    name: "CQ9",
+  },
+  {
+    img: m1,
+    name: "DS",
+  },
+  {
+    img: m2,
+    name: "FC",
+  },
+  {
+    img: m3,
+    name: "FC",
+  },
+  {
+    img: m3,
+    name: "FC",
+  },
+  {
+    img: m4,
+    name: "FC",
+  },
+  {
+    img: m5,
+    name: "FC",
+  },
 ]);
 onMounted(() => {
   AOS.init();
@@ -92,11 +125,17 @@ const demoType = ref(0);
 
 <template>
   <section id="demo" class="about_style__two lg:pt-30 pt-24 relative z-1">
-    <div class="container max-w-[1570px] mx-auto text-white">
+    <div
+      class="container max-w-[1570px] mx-auto text-white w-4/5 md:w-4/5 lg:w-4/5 xl:w-4/5"
+    >
       <div class="title mb-12" data-aos="fade-down">
-        <h3 class="text-3xl text-center mb-2">演示站点</h3>
-        <h5 class="text-sm text-center">
-          任意挑选喜欢模版，进入内页可以看更多不同风格站点
+        <h3
+          class="text-base md:text-xl lg:text-2xl xl:text-3xl text-center mb-2"
+        >
+          {{ $t("common.demo.title") }}
+        </h3>
+        <h5 class="text-xs md:text-base lg:text-base xl:text-base text-center">
+          {{ $t("common.demo.des") }}
         </h5>
       </div>
       <div
@@ -157,7 +196,7 @@ const demoType = ref(0);
           slides-per-view="auto"
           :coverflow-effect="{
             rotate: 0,
-            stretch: 0,
+            stretch: 10,
             depth: 100,
             modifier: 2.5,
           }"
@@ -179,16 +218,18 @@ const demoType = ref(0);
       </div>
       <div class="btntab" data-aos="fade-up">
         <button
+          class="text-xs md:text-sm lg:text-1md xl:text-md"
           :class="`${demoType == 0 ? 'active' : ''}`"
           @click="demoType = 0"
         >
-          电脑端web
+          {{ $t("common.demo.btnpc") }}
         </button>
         <button
+          class="text-xs md:text-sm lg:text-1md xl:text-md"
           :class="`${demoType == 1 ? 'active' : ''}`"
           @click="demoType = 1"
         >
-          手机端APP
+          {{ $t("common.demo.btnapp") }}
         </button>
       </div>
     </div>
@@ -196,6 +237,7 @@ const demoType = ref(0);
 </template>
 
 <style lang="scss" scoped>
+@import url(./../assets/css/style.scss);
 #demo {
   width: 100%;
   height: 100%;
@@ -205,27 +247,27 @@ const demoType = ref(0);
   text-align: center;
   position: relative;
   max-width: 863px;
-  min-width: 863px;
-  height: 685px;
+  width: 90%;
+  max-height: 685px;
 }
 .mside {
   max-width: 338px;
-  min-width: 338px;
-  height: 685px;
+  width: 90%;
+  max-height: 685px;
   text-align: center;
   position: relative;
 }
 .btn {
   cursor: pointer;
   position: absolute;
-  width: 60px;
+  width: 10%;
   top: 50%;
 }
 .btnPrev {
-  left: -100px;
+  left: -10%;
 }
 .btnNext {
-  right: -100px;
+  right: -10%;
 }
 .btntab {
   margin-top: 10px;
@@ -236,22 +278,23 @@ const demoType = ref(0);
     cursor: pointer;
     outline: none;
     border: none;
-    width: 316px;
+    /* width: 316px; */
     font-weight: 600;
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
     color: #6c7ba8;
-    padding: 17px 0;
+    /* padding: 17px 0; */
+    padding: 1.5% 8%;
     background: linear-gradient(181.91deg, #ffffff 2.92%, #dbe7ff 99.7%);
     background: #17171b;
     border: 2px solid #cddeff;
     border: 2px solid #bd0507;
     // box-shadow: inset 0 -3px 4px rgba(175, 194, 230, 0.16), inset 0 1px 7px #fff;
-    border-radius: 30px;
+    border-radius: 60px;
     color: #fff;
   }
   button:first-child {
-    margin-right: 40px;
+    margin-right: 4%;
   }
   button.active {
     color: #fff;

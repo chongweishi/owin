@@ -218,7 +218,7 @@ const showlang = ref(false);
         <a
           href="javascript:void(0)"
           class="text-white font-base text-base inline-flex items-center hover:text-primary-1 duration-200 nav-link relative"
-          @click="showlang = true"
+          @click="showlang = !showlang"
         >
           <span class="ml-2">{{ $t("common.menu.lang") }}</span>
           <ul class="nav-dropdown" :class="showlang ? 'showlang' : ''">

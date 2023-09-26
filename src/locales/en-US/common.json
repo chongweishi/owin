@@ -1,13 +1,54 @@
 {
+  "advantage": {
+    "des": "The influence of the brand is obvious, your better choice",
+    "des1": "Problems such as the impact of single-currency site policies, declining performance, waste of old sites, increased costs, hindered development, and limited manpower can all be solved in our global multi-currency sites.",
+    "des2": "Customers can freely and flexibly choose the layout, and can also customize exclusive site skins, which greatly enhances the controllability of site style.",
+    "des3": "Supports Simplified Chinese, English, Traditional Chinese, Hindi, Spanish, French, Arabic, Russian, Portuguese, Indonesian, German, Japanese, Korean, Vietnamese...",
+    "title": "branded advantages",
+    "title1": "Support global multi-currency and operate multiple countries at the same time",
+    "title2": "Supports a variety of layout options and can also be customized",
+    "title3": "Supports more than 20 languages ​​and covers 95% of the world’s population",
+    "title4": "Low and reasonable fees, sincere and attentive service"
+  },
+  "demo": {
+    "btnapp": "Mobile APP",
+    "btnpc": "PC web",
+    "des": "You can choose any template you like and enter the inner page to see more sites of different styles.",
+    "title": "demo site"
+  },
+  "home": {
+    "btn": "contact us",
+    "h1": "Professional Global",
+    "h2": "Baowang",
+    "p": "The world's top ten API brand suppliers, built by a top 500-person development team over 10 years, are your reliable partners and security backing."
+  },
   "menu": {
     "advantage": "Advantage",
     "api": "API",
     "contact": "Contact",
     "demo": "Demo",
     "home": "Home",
-    "partner": "Partner",
-    "story": "Story",
     "lang": "Language",
-    "menu": "Menu"
+    "menu": "Menu",
+    "partner": "Partner",
+    "story": "Story"
+  },
+  "story": {
+    "des1": "The TOP10 package network project was established in 2013 and has been developed for more than 10 years. It has served hundreds of customers and has a technical team of hundreds to ensure the stable operation of the project 24 hours a day.",
+    "des2": "Developed 60 different types of templates to meet 70% of market demand. \nIf you have more ideas and the market templates cannot satisfy you, we provide a full range of solutions from interaction design, interface design to function customization, including PC, H5 and APP.",
+    "des3": "Provides Chinese, English, Thai, Vietnamese and other multi-language versions, as well as customized services in any language; developed using pure native technology, completely solving problems such as loss of recharge funds and traffic hijacking, ensuring website security; more than 40 companies including BBIN, AG, MG, etc. \nInternational game manufacturer, more than 200 games to choose from.",
+    "stat1name": "Cumulatively developed",
+    "stat1num": "10",
+    "stat1unit": "Year",
+    "stat2name": "Customer service",
+    "stat2num": "100",
+    "stat2unit": "+",
+    "stat3name": "Different types of templates",
+    "stat3num": "60",
+    "stat4name": "International game manufacturer",
+    "stat4num": "40",
+    "stat5name": "game selection",
+    "stat5num": "200",
+    "title": "Brand story"
   }
 }

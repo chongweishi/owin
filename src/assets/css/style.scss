@@ -4556,19 +4556,19 @@ Customiz Third-Party Plugins
   border-color: rgb(3 4 21 / var(--tw-border-opacity));
 }
 
-.tab-content {
-  display: none;
-  --tw-translate-y: 0.75rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 0;
-  animation: fadeIn 0.5s ease 1 forwards;
-}
+// .tab-content {
+//   display: none;
+//   --tw-translate-y: 0.75rem;
+//   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+//     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+//     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+//   opacity: 0;
+//   animation: fadeIn 0.5s ease 1 forwards;
+// }
 
-.tab-content.active {
-  display: block;
-}
+// .tab-content.active {
+//   display: block;
+// }
 
 .booking-tabs .tab-link,
 .login-tabs .tab-link {
@@ -5142,6 +5142,9 @@ Customiz Third-Party Plugins
   }
   .md\:text-sm {
     font-size: 14px;
+  }
+  .md\:text-base {
+    font-size: 16px;
   }
   .md\:text-1md {
     font-size: 16px;

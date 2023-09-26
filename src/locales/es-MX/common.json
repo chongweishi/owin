@@ -1,13 +1,54 @@
 {
+  "advantage": {
+    "des": "La influencia de la marca es obvia, tu mejor elección.",
+    "des1": "Problemas como el impacto de las políticas de sitios de moneda única, la disminución del rendimiento, el desperdicio de sitios antiguos, el aumento de costos, el desarrollo obstaculizado y la mano de obra limitada se pueden resolver en nuestros sitios globales de múltiples monedas.",
+    "des2": "Los clientes pueden elegir el diseño de forma libre y flexible, y también pueden personalizar diseños exclusivos del sitio, lo que mejora enormemente la capacidad de control del estilo del sitio.",
+    "des3": "Admite chino simplificado, inglés, chino tradicional, hindi, español, francés, árabe, ruso, portugués, indonesio, alemán, japonés, coreano, vietnamita...",
+    "title": "ventajas de marca",
+    "title1": "Admite múltiples monedas globales y opera en varios países al mismo tiempo",
+    "title2": "Admite una variedad de opciones de diseño y también se puede personalizar",
+    "title3": "Admite más de 20 idiomas y cubre el 95% de la población mundial",
+    "title4": "Tarifas bajas y razonables, servicio sincero y atento."
+  },
+  "demo": {
+    "btnapp": "Aplicación movil",
+    "btnpc": "Internet para PC",
+    "des": "Puedes elegir cualquier plantilla que te guste e ingresar a la página interior para ver más sitios de diferentes estilos.",
+    "title": "sitio de demostración"
+  },
+  "home": {
+    "btn": "Contáctenos",
+    "h1": "Profesional Global",
+    "h2": "baowang",
+    "p": "Los diez principales proveedores de marcas API del mundo, creados por un equipo de desarrollo de 500 personas durante 10 años, son sus socios confiables y su respaldo de seguridad."
+  },
   "menu": {
     "advantage": "Ventaja",
     "api": "API",
     "contact": "Contacto",
     "demo": "Manifestación",
     "home": "Hogar",
-    "partner": "Pareja",
-    "story": "Historia",
     "lang": "Idioma",
-    "menu": "Menú"
+    "menu": "Menú",
+    "partner": "Pareja",
+    "story": "Historia"
+  },
+  "story": {
+    "des1": "El proyecto de red de paquetes TOP10 se estableció en 2013 y se ha desarrollado durante más de 10 años, ha atendido a cientos de clientes y cuenta con un equipo técnico de cientos para garantizar el funcionamiento estable del proyecto las 24 horas del día.",
+    "des2": "Desarrollé 60 tipos diferentes de plantillas para satisfacer el 70% de la demanda del mercado. \nSi tiene más ideas y las plantillas del mercado no pueden satisfacerlo, ofrecemos una gama completa de soluciones desde diseño de interacción, diseño de interfaz hasta personalización de funciones, incluyendo PC, H5 y APP.",
+    "des3": "Proporciona versiones en chino, inglés, tailandés, vietnamita y otros idiomas, así como servicios personalizados en cualquier idioma; desarrollado utilizando tecnología nativa pura, resolviendo por completo problemas como la pérdida de fondos de recarga y el secuestro de tráfico, garantizando la seguridad del sitio web; más de 40 empresas como BBIN, AG, MG, etc. Fabricante internacional de juegos, más de 200 juegos para elegir.",
+    "stat1name": "Desarrollado acumulativamente",
+    "stat1num": "10",
+    "stat1unit": "Año",
+    "stat2name": "Servicio al Cliente",
+    "stat2num": "100",
+    "stat2unit": "+",
+    "stat3name": "Diferentes tipos de plantillas",
+    "stat3num": "60",
+    "stat4name": "Fabricante de juegos internacional",
+    "stat4num": "40",
+    "stat5name": "selección de juego",
+    "stat5num": "200",
+    "title": "Historia de la marca"
   }
 }

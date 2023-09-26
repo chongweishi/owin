@@ -1,336 +1,217 @@
 <script setup>
 import { ref } from "vue";
-const test = ref("test");
-console.log(test);
+import i18n from "@/plugin/i18n";
+import { getAssetsFile } from "@/utils";
+import AdPrice from "@/components/AdPrice.vue";
+import AdLang from "@/components/AdLang.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectCoverflow,
+  Autoplay,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-fade";
+const modules = ref([
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectCoverflow,
+  Autoplay,
+]);
+const list = ref([
+  {
+    index: 0,
+    num: "01",
+    title: i18n.t("common.advantage.title1"),
+    description: i18n.t("common.advantage.des1"),
+    image: "img/advantage/banner0.png",
+  },
+  {
+    index: 1,
+    num: "02",
+    title: i18n.t("common.advantage.title2"),
+    description: "i18n.t('common.advantage.des2')",
+    image: "img/advantage/banner1.png",
+  },
+  {
+    index: 2,
+    num: "03",
+    title: i18n.t("common.advantage.title3"),
+    description: i18n.t("common.advantage.des3"),
+    image: "img/advantage/banner2.png",
+  },
+  {
+    index: 3,
+    num: "04",
+    title: i18n.t("common.advantage.title4"),
+    description: "",
+    image: "",
+  },
+]);
+const tabindex = ref(0);
+const changeIndex = (index) => {
+  tabindex.value = index;
+};
 </script>
 
 <template>
-  <section id="advantage" class="about_style__two lg:pt-30 pt-24 relative z-1">
-    <div class="container max-w-[1570px] mx-auto text-white pb-24">
+  <section
+    id="advantage"
+    class="about_style__two lg:pt-30 pt-24 pb-0 md:pb-0 lg:pb-24 relative z-1"
+  >
+    <div class="container max-w-[1570px] mx-auto text-white">
       <div class="title mb-12" data-aos="fade-down">
-        <h3 class="text-3xl text-center mb-2">品牌优势</h3>
-        <h5 class="text-sm text-center">品牌的影响力显而易见，您更好的选择</h5>
+        <h3
+          class="text-base md:text-xl lg:text-2xl xl:text-3xl text-center mb-2"
+        >
+          {{ $t("common.advantage.title") }}
+        </h3>
+        <h5 class="text-xs md:text-base lg:text-base xl:text-base text-center">
+          {{ $t("common.advantage.des") }}
+        </h5>
       </div>
-      <div class="feature-tab">
-        <ul class="tab-section">
-          <li class="feature-item" data-id="host_tournament">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">01</span>
+      <div
+        class="feature-tab hidden lg:grid lg:grid-cols-12 gap-base items-center"
+      >
+        <ul class="tab-section lg:col-span-6">
+          <li
+            class="feature-item"
+            v-for="(item, index) in list"
+            :key="index"
+            :class="tabindex == item.index ? 'active' : ''"
+            @click="changeIndex(item.index)"
+          >
+            <img src="@/assets/img/advantage/tabbg.png" class="outline1" />
+            <span class="index">{{ item.num }}</span>
             <span class="divider"></span>
-            <span class="title">舉辦賽事</span>
-          </li>
-          <li class="feature-item" data-id="create_live">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">02</span>
-            <span class="divider"></span>
-            <span class="title">創建直播</span>
-          </li>
-          <li class="feature-item" data-id="upload_video">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">03</span>
-            <span class="divider"></span>
-            <span class="title">上傳短片</span>
-          </li>
-          <li class="feature-item" data-id="chat">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">04</span>
-            <span class="divider"></span>
-            <span class="title">與粉絲聊天</span>
-          </li>
-          <li class="feature-item" data-id="nft">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">05</span>
-            <span class="divider"></span>
-            <span class="title">發佈&amp;銷售 NFT</span>
-          </li>
-          <li class="feature-item active" data-id="monetize">
-            <svg
-              class="outline1"
-              width="56"
-              height="140"
-              viewBox="0 0 56 140"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 138.5V117C1 105.954 9.9543 97 21 97H47C51.4183 97 55 93.4183 55 89V51C55 46.5817 51.4183 43 47 43H21C9.95431 43 1 34.0457 1 23V1"
-                stroke="url(#paint_outline_linear)"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint_outline_linear"
-                  x1="56.5"
-                  y1="67.5"
-                  x2="-6"
-                  y2="67.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#426BFF"></stop>
-                  <stop offset="1" stop-color="#426BFF" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="index">06</span>
-            <span class="divider"></span>
-            <span class="title">通過粉絲通行證獲利</span>
+            <span class="title">{{ item.title }}</span>
           </li>
         </ul>
-        <ul class="tab-content">
-          <li class="feature-content" data-id="host_tournament">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/homepage/Host_tournaments.png"
-                alt="舉辦賽事"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/homepage/Host_tournaments.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              組織、管理和與粉絲一起玩。從大量遊戲和模式中進行選擇。
-            </p>
-            <span class="title">舉辦賽事</span>
-          </li>
-          <li class="feature-content" data-id="create_live">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/homepage/Create_Live_Streams.png"
-                alt="創建直播"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/homepage/Create_Live_Streams.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              集所有直播頻道於大成。通過互動表情符號和迷你遊戲讓粉絲參與進來。
-            </p>
-            <span class="title">創建直播</span>
-          </li>
-          <li class="feature-content" data-id="upload_video">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/homepage/Upload_Short_Videos.png"
-                alt="上傳短片"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/homepage/Upload_Short_Videos.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              使用簡單直觀的編輯和發佈工具，展示您在遊戲和創造力方面的技能。
-            </p>
-            <span class="title">上傳短片</span>
-          </li>
-          <li class="feature-content" data-id="chat">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/homepage/Chatting_with_Fans.png"
-                alt="與粉絲聊天"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/homepage/Chatting_with_Fans.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              放鬆身心並與粉絲互動的專屬空間。分享笑話、迷因、GIF 等。
-            </p>
-            <span class="title">與粉絲聊天</span>
-          </li>
-          <li class="feature-content" data-id="nft">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/nft/publish-sell-nft.png"
-                alt="發佈&amp;銷售 NFT"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/nft/publish-sell-nft.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              建立您自己的 NFT
-              或使用現成的模板。透過將它們出售給您的俱樂部追隨者來賺取您的收入。
-            </p>
-            <span class="title">發佈&amp;銷售 NFT</span>
-          </li>
-          <li class="feature-content active" data-id="monetize">
-            <figure class="image-section">
-              <img
-                class="img-responsive loadded unblur"
-                data-src="https://cdn.game.tv/images/homepage/monetize.png"
-                alt="通過粉絲通行證獲利"
-                height="192px"
-                width="326px"
-                src="https://cdn.game.tv/images/homepage/monetize.png"
-              />
-              <div class="img-loading"></div>
-            </figure>
-            <p class="desc">
-              從真正的粉絲那裡獲得直接支持。用獨家內容獎勵那些忠誠的人。
-            </p>
-            <span class="title">通過粉絲通行證獲利</span>
+        <ul class="tab-content lg:col-span-6">
+          <li
+            class="feature-content"
+            v-for="(item, index) in list"
+            :class="tabindex == item.index ? 'active' : ''"
+            :key="index"
+          >
+            <AdLang v-if="tabindex == 2"></AdLang>
+            <AdPrice v-else-if="tabindex == 3"></AdPrice>
+            <template v-else>
+              <figure class="image-section">
+                <img
+                  class="img-responsive loadded unblur"
+                  height="192px"
+                  width="326px"
+                  :src="getAssetsFile(item.image)"
+                />
+                <div class="img-loading"></div>
+              </figure>
+              <p
+                class="desc text-xs md:text-base lg:text-base xl:text-base text-center"
+              >
+                {{ item.description }}
+              </p>
+            </template>
           </li>
         </ul>
+      </div>
+      <div class="block lg:hidden">
+        <div v-for="(item, index) in list" :key="index" class="card mb-6">
+          <h1 class="text-base text-center mt-6 mb-6">{{ item.title }}</h1>
+          <div class="tab-content">
+            <template v-if="item.index == 2">
+              <AdLang></AdLang>
+            </template>
+            <template v-else-if="item.index == 3">
+              <AdPrice></AdPrice>
+            </template>
+
+            <template v-else>
+              <figure class="image-section2">
+                <img
+                  class="img-responsive loadded unblur"
+                  height="192px"
+                  width="326px"
+                  :src="getAssetsFile(item.image)"
+                />
+                <div class="img-loading"></div>
+              </figure>
+              <p
+                class="desc2 text-xs md:text-base lg:text-base xl:text-base text-center"
+              >
+                {{ item.description }}
+              </p>
+            </template>
+          </div>
+        </div>
+
+        <!-- <swiper
+          class="swiper"
+          :effect="'fade'"
+          :modules="modules"
+          :loop="true"
+          :autoplay="{ delay: 3000 }"
+          :navigation="{
+            nextEl: '.btnNext',
+            prevEl: '.btnPrev',
+          }"
+          :pagination="false"
+          :scrollbar="false"
+          :centered-slides="true"
+          slides-per-view="1"
+        >
+          <swiper-slide
+            class="swiper-slide mside"
+            v-for="(item, index) in list"
+            :key="index"
+          >
+            <template v-if="item.index == 2">
+              <AdLang></AdLang>
+            </template>
+            <template v-else-if="item.index == 3">
+              <AdPrice></AdPrice>
+            </template>
+
+            <template v-else>
+              <figure class="image-section2">
+                <img
+                  class="img-responsive loadded unblur"
+                  height="192px"
+                  width="326px"
+                  :src="getAssetsFile(item.image)"
+                />
+                <div class="img-loading"></div>
+              </figure>
+              <p
+                class="desc2 text-xs md:text-base lg:text-base xl:text-base text-center"
+              >
+                {{ item.description }}
+              </p>
+            </template>
+          </swiper-slide>
+        </swiper> -->
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+@import url(./../assets/css/style.scss);
 #advantage {
   width: 100%;
   height: 100%;
-  background: url(@/assets/img/bg2.png) no-repeat;
+  background: #08080a url(@/assets/img/bg2.png) no-repeat;
 }
 .feature-tab {
   margin-top: 112px;
-  display: flex;
+  /* display: flex; */
   max-width: 100%;
   align-items: center;
 }
@@ -356,13 +237,13 @@ console.log(test);
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #6d7c88;
+  color: #555;
   margin-left: 20px;
 }
 .feature-tab .tab-section .feature-item .divider {
   width: 16px;
   height: 2px;
-  background: #2c3942;
+  background: #555;
   position: relative;
   display: flex;
   margin: 0 24px 0 40px;
@@ -371,7 +252,7 @@ console.log(test);
   content: "";
   height: 8px;
   width: 8px;
-  background: #2c3942;
+  background: #555;
   position: absolute;
   right: -4px;
   top: -4px;
@@ -379,9 +260,12 @@ console.log(test);
 }
 .feature-tab .tab-section .feature-item .title {
   font-weight: 700;
-  color: #6d7c88;
+  color: #555;
   font-size: 18px;
   line-height: 24px;
+}
+.feature-tab .tab-section .feature-item.active .index {
+  color: #fff;
 }
 .feature-tab .tab-section .feature-item.active .title {
   font-size: 24px;
@@ -394,7 +278,7 @@ console.log(test);
 }
 .feature-tab .tab-section .feature-item.active .divider,
 .feature-tab .tab-section .feature-item.active .divider:after {
-  background: #ffc700;
+  background: #bd0507;
 }
 
 .feature-tab .tab-content {
@@ -403,7 +287,7 @@ console.log(test);
 
 .feature-tab .tab-content .feature-content {
   display: none;
-  height: 508px;
+  max-height: 508px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -436,12 +320,13 @@ console.log(test);
 }
 
 .feature-tab .tab-content .feature-content .image-section:after {
-  background: linear-gradient(225deg, #212a31 16.66%, #1c252c 16.67%);
-  border: 1px solid #2c3942;
+  background: linear-gradient(225deg, #2f2f2f 16.66%, #1f1f1f 16.67%);
+  border: 1px solid #3f3f3f;
   content: "";
   left: 0;
   bottom: 0;
-  height: 305px;
+  max-height: 305px;
+  height: 90%;
   border-radius: 12px;
   position: absolute;
   right: 0;
@@ -454,14 +339,66 @@ console.log(test);
   z-index: 1;
   -o-object-fit: cover;
   object-fit: cover;
+  padding: 0 18%;
 }
 
 .feature-tab .tab-content .feature-content .desc {
   font-weight: 400;
-  font-size: 20px;
   line-height: 36px;
-  color: #ced7de;
+  color: #fff;
   max-width: 678px;
   margin: 0;
+}
+.image-section2 {
+  position: relative;
+  width: 100%;
+}
+
+.image-section2 .img-loading {
+  background-color: transparent;
+}
+
+.image-section2 .img-loading .svg-icon {
+  z-index: 9;
+}
+
+.image-section2:after {
+  background: linear-gradient(225deg, #2f2f2f 16.66%, #1f1f1f 16.67%);
+  border: 1px solid #3f3f3f;
+  content: "";
+  left: 0;
+  bottom: 0;
+  max-height: 305px;
+  height: 90%;
+  border-radius: 12px;
+  position: absolute;
+  right: 0;
+}
+
+.image-section2 img {
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  padding: 0 18%;
+}
+
+.desc2 {
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  max-width: 678px;
+  margin: 0;
+  text-align: left;
+  opacity: 0.7;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card {
+  background: #121212;
+  padding: 10px;
+  border-radius: 10px;
 }
 </style>

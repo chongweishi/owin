@@ -1,15 +1,15 @@
 <script setup>
 import { ref } from "vue";
-const test = ref("test");
-console.log(test);
 </script>
 
 <template>
   <section id="price" class="about_style__two lg:pt-30 pt-24 relative z-1">
     <div class="container max-w-[1570px] mx-auto text-white">
       <div class="title mb-12" data-aos="fade-down">
-        <h3 class="text-3xl text-center mb-2">包网产品价格</h3>
-        <h5 class="text-sm text-center">收费低廉合理，服务真诚用心</h5>
+        <h3 class="text-3xl text-center mb-2">
+          {{ $t("common.price.title") }}
+        </h3>
+        <h5 class="text-sm text-center">{{ $t("common.price.des") }}</h5>
       </div>
       <div
         class="con-main-wrap wow bounceInUp list-5"
@@ -22,7 +22,7 @@ console.log(test);
               background: linear-gradient(225deg, #0f0f0f 3%, #000000 100%);
             "
           >
-            <span>开版费</span>
+            <span>{{ $t("common.price.kbf") }}</span>
             <p>4W</p>
             <span class="tip"></span>
           </div>
@@ -34,23 +34,23 @@ console.log(test);
           >
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>专业团队技术配置指导开站事宜</p>
+              <p>{{ $t("common.price.kbf1") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>高级UI设计师协助处理页面展示效果</p>
+              <p>{{ $t("common.price.kbf2") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>专业技术团队高效快捷部署开站</p>
+              <p>{{ $t("common.price.kbf3") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>免费对接三方支付、短信平台等</p>
+              <p>{{ $t("common.price.kbf4") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>运维团队项目部署，域名解析等</p>
+              <p>{{ $t("common.price.kbf5") }}</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ console.log(test);
               background: linear-gradient(225deg, #242424 3%, #151515 100%);
             "
           >
-            <span>月维护费</span>
+            <span>{{ $t("common.price.ywhf") }}</span>
             <p>4W</p>
             <span class="tip"></span>
           </div>
@@ -76,19 +76,19 @@ console.log(test);
           >
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>7*24小时在线客服协助处理问题</p>
+              <p>{{ $t("common.price.ywhf1") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>技术团队高效积极协助处理解答疑惑</p>
+              <p>{{ $t("common.price.ywhf2") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>平台自定义简单需求，免费开发维护</p>
+              <p>{{ $t("common.price.ywhf3") }}</p>
             </div>
             <div class="text-item">
               <img src="@/assets/img/gou.png" alt="" class="img-check" />
-              <p>运维团队24小时保证网站安全</p>
+              <p>{{ $t("common.price.ywhf4") }}</p>
             </div>
           </div>
         </div>
@@ -102,14 +102,14 @@ console.log(test);
               background: linear-gradient(207deg, #bd0507 0%, #bd0507 100%);
             "
           >
-            <span>最终开站费用</span>
+            <span>{{ $t("common.price.zzfy") }}</span>
             <p>8W</p>
             <span class="tip"></span>
           </div>
           <div class="item-final">
             <img src="@/assets/img/price-img.png" alt="" class="icon-price" />
-            <h4>最终洽谈后如期交付原生APP、电脑端、H5端</h4>
-            <p>（定制化平台或者需求及时联系商务哦）</p>
+            <h4>{{ $t("common.price.zzfy1") }}</h4>
+            <p>{{ $t("common.price.zzfy2") }}</p>
           </div>
         </div>
       </div>

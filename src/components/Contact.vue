@@ -8,7 +8,10 @@ console.log(test);
   <section id="contact" class="about_style__two lg:pt-30 pt-24 relative z-1">
     <div class="container max-w-[1570px] mx-auto text-white">
       <div class="title mb-12" data-aos="fade-down">
-        <h3 class="text-3xl text-center mb-2">包网产品价格</h3>
+        <h3 class="text-3xl text-center mb-2">
+          {{ $t("common.contact.title") }}
+        </h3>
+        <h5 class="text-sm text-center">{{ $t("common.contact.des") }}</h5>
       </div>
       <div class="list w-full relative">
         <i class="line"></i>
@@ -20,7 +23,7 @@ console.log(test);
               </div>
               <p class="pt-4 text-center">
                 <span>01</span>
-                意向需求洽谈
+                {{ $t("common.contact.step1") }}
               </p>
             </div>
             <div class="item">
@@ -29,7 +32,7 @@ console.log(test);
               </div>
               <p class="pt-4 text-center">
                 <span>02</span>
-                签订合作协议
+                {{ $t("common.contact.step2") }}
               </p>
             </div>
             <div class="item">
@@ -38,7 +41,7 @@ console.log(test);
               </div>
               <p class="pt-4 text-center">
                 <span>03</span>
-                建站细节沟通
+                {{ $t("common.contact.step3") }}
               </p>
             </div>
             <div class="item">
@@ -47,7 +50,7 @@ console.log(test);
               </div>
               <p class="pt-4 text-center">
                 <span>04</span>
-                平台站点部署
+                {{ $t("common.contact.step4") }}
               </p>
             </div>
             <div class="item">
@@ -56,7 +59,7 @@ console.log(test);
               </div>
               <p class="pt-4 text-center">
                 <span>05</span>
-                正式上线运营
+                {{ $t("common.contact.step5") }}
               </p>
             </div>
           </div>
@@ -65,7 +68,7 @@ console.log(test);
       <div class="contact-wrap mt-24">
         <div class="contact">
           <a href="https://t.me/KMBWVIP" target="_blank" class="contact-btn">
-            联系商务
+            {{ $t("common.contact.btn") }}
           </a>
         </div>
         <div class="footer-list w-full flex items-center justify-center mt-24">
@@ -89,7 +92,7 @@ console.log(test);
           </div>
         </div>
       </div>
-      <div class="footer">版权所有 ©2022-2023 TOP10包网 保留所有权</div>
+      <div class="footer">{{ $t("common.contact.copyright") }}</div>
     </div>
   </section>
 </template>
