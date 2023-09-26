@@ -6,10 +6,14 @@ import { ref } from "vue";
   <section id="partner" class="about_style__two lg:pt-30 pt-24 relative z-1">
     <div class="container max-w-[1570px] mx-auto text-white">
       <div class="title pb-12" data-aos="fade-down">
-        <h3 class="text-3xl text-center mb-2">
+        <h3
+          class="text-base md:text-xl lg:text-2xl xl:text-3xl text-center mb-2"
+        >
           {{ $t("common.partner.title") }}
         </h3>
-        <h5 class="text-sm text-center">{{ $t("common.partner.des") }}</h5>
+        <h5 class="text-xs md:text-base lg:text-base xl:text-base text-center">
+          {{ $t("common.partner.des") }}
+        </h5>
       </div>
       <div
         class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-base pb-24"

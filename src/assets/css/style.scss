@@ -1109,11 +1109,18 @@ html {
 .h-20 {
   height: 5rem;
 }
-
+.h-24 {
+  height: 6rem;
+}
+.h-28 {
+  height: 7rem;
+}
 .h-30 {
   height: 120px;
 }
-
+.h-32 {
+  height: 8rem;
+}
 .h-4 {
   height: 1rem;
 }
@@ -5039,7 +5046,9 @@ Customiz Third-Party Plugins
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
-
+.h-auto {
+  height: auto;
+}
 @media (min-width: 576px) {
   .sm\:mx-0 {
     margin-left: 0px;
@@ -5053,9 +5062,21 @@ Customiz Third-Party Plugins
   .sm\:text-left {
     text-align: left;
   }
+  .sm\:h-auto {
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+  .md\:h-164 {
+    height: 164px;
+  }
+  .md\:absolute {
+    position: absolute;
+  }
   .md\:col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -5094,6 +5115,12 @@ Customiz Third-Party Plugins
 
   .md\:w-14 {
     width: 3.5rem;
+  }
+  .md\:w-28 {
+    width: 7rem;
+  }
+  .md\:h-28 {
+    height: 7rem;
   }
 
   .md\:max-w-\[345px\] {
@@ -5335,6 +5362,12 @@ Customiz Third-Party Plugins
 
   .lg\:h-20 {
     height: 5rem;
+  }
+  .lg\:w-32 {
+    width: 8rem;
+  }
+  .lg\:h-32 {
+    height: 8rem;
   }
 
   .lg\:h-\[120px\] {
