@@ -37,7 +37,7 @@ const list = ref([
     index: 1,
     num: "02",
     title: i18n.t("common.advantage.title2"),
-    description: "i18n.t('common.advantage.des2')",
+    description: i18n.t("common.advantage.des2"),
     image: "img/advantage/banner1.png",
   },
   {

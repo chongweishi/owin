@@ -107,10 +107,13 @@ console.log(test);
           <div class="footer-item flex items-center mr-12 mb-6">
             <img src="@/assets/img/icon-tg.png" class="mr-2" />
             <span class="text-xs md:text-sm lg:text-1md xl:text-md">
-              <a href="https://t.me/KMBWVIP" target="_blank">@KMBWVIP</a>
+              <a href="https://t.me/KMBWVIP" target="_blank">@top10admin</a>
             </span>
           </div>
-          <div class="footer-item flex items-center mr-12 mb-6">
+          <div
+            class="footer-item flex items-center mr-12 mb-6"
+            style="display: none"
+          >
             <img src="@/assets/img/icon-whats.png" class="mr-2" />
             <span class="text-xs md:text-sm lg:text-1md xl:text-md">
               <span class="text">+63 912 888 8888</span>
@@ -119,10 +122,10 @@ console.log(test);
           <div class="footer-item flex items-center mr-12 mb-6">
             <img src="@/assets/img/icon-email.png" class="mr-2" />
             <span class="text-xs md:text-sm lg:text-1md xl:text-md">
-              <span class="text">888@TOP10.Game</span>
+              <span class="text">top10gameeasy@gmail.come</span>
             </span>
           </div>
-          <div class="footer-item flex items-center mb-6">
+          <div class="footer-item flex items-center mb-6" style="display: none">
             <img src="@/assets/img/icon-tel.png" class="mr-2" />
             <span class="text-xs md:text-sm lg:text-1md xl:text-md">
               <span class="text">+63 912 888 8888</span>
